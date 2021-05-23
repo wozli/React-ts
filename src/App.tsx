@@ -5,6 +5,7 @@ import UsersPage from "./pages/UsersPage";
 import TodosPage from "./pages/TodosPage";
 import EventPage from "./pages/EventPage";
 import UserItemPage from "./pages/UserItemPage";
+import Hooks from "./pages/Hooks";
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
                     <NavLink to='/users' style={{marginRight: 15}}>users</NavLink>
                     <NavLink to='/todos' style={{marginRight: 15}}>todos</NavLink>
                     <NavLink to='/events' style={{marginRight: 15}}>events</NavLink>
+                    <NavLink to='/hooks' style={{marginRight: 15}}>custom hooks</NavLink>
                 </div>
                 <Route exact path={'/users'}>
                     <UsersPage/>
@@ -29,6 +31,9 @@ const App = () => {
                 </Route>
                 <Route exact path={'/users/:id'}>
                     <UserItemPage/>
+                </Route>
+                <Route exact path={'/hooks'}>
+                    <Hooks/>
                 </Route>
             </div>
         </BrowserRouter>
